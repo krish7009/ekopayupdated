@@ -1,0 +1,201 @@
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #70d650;
+    color: #16161b;
+}
+
+header {
+    
+    color: #ffffff;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+
+header h1 {
+    
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    animation: slideDown 1s ease-out;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #70d650;
+    font-size: 1.3rem;
+}
+/* Main Article Styles */
+
+.main-article {
+    display: flex;
+    flex-direction: column; /* Stack articles vertically */
+    animation: fadeInUp 2s ease-in;
+    animation: fadeIn 2s ease-in;
+
+}
+
+.card1 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    margin-bottom: 20px; /* Adds spacing between cards */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card1 a {
+    text-decoration: none;
+    color: inherit;
+}
+.main-article {
+    margin-bottom: 30px;
+}
+
+.main-article-img {
+    width: 100%; /* Make the main article image full width */
+    height: 500px; /* Larger height for the main article image */
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card1:hover h3 {
+    color: #7ace59;
+}
+
+/* Other Articles */
+.article-container {
+    display: flex;
+    flex-direction: column; /* Stack articles vertically */
+    animation: fadeInUp 2s ease-in;
+    animation: fadeIn 2s ease-in;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    margin-bottom: 20px; /* Adds spacing between cards */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Article Image */
+.article-image {
+    width: 100%;
+     /* Full width for regular articles */
+    height: 100%; /* Smaller height for other articles */
+    object-fit: cover; /* Maintains aspect ratio without distortion */
+    margin-bottom: 10px;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover h3 {
+    color: #7ace59;
+}
+
+/* Footer */
+footer {
+    background-color: #7ace59;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .main-article img {
+        height: 500px; /* Adjust main article image for smaller screens */
+    }
+
+    .article-image {
+        height: 200px; /* Adjust regular article image for smaller screens */
+    }
+}
+/*annimations*/
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
